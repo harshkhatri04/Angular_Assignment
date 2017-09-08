@@ -1,8 +1,9 @@
 body {
     padding: 20px;
     font-family: 'Open Sans', sans-serif;
-    background-color: #f7f7f7;
+    /* background: #112233; */
 }
+
 
 .lib-panel {
     margin-bottom: 20Px;
@@ -69,4 +70,7 @@ body {
 
 .searchBar{
     margin-top: 25px;
+}
+.date{
+    color: white;
 }

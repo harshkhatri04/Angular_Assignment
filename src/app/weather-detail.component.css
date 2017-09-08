@@ -1,0 +1,247 @@
+
+
+.weather-card {
+  margin: 60px auto;
+  height: 740px;
+  width: 450px;
+  background: #fff;
+  box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.weather-card .top {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("https://s-media-cache-ak0.pinimg.com/564x/cf/1e/c4/cf1ec4b0c96e59657a46867a91bb0d1e.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.weather-card .top .wrapper .mynav {
+  height: 20px;
+}
+.weather-card .top .wrapper .mynav .lnr {
+  color: #fff;
+  font-size: 20px;
+}
+.weather-card .top .wrapper .mynav .lnr-chevron-left {
+  display: inline-block;
+  float: left;
+}
+.weather-card .top .wrapper .mynav .lnr-cog {
+  display: inline-block;
+  float: right;
+}
+.weather-card .top .wrapper .heading {
+  margin-top: 20px;
+  font-size: 35px;
+  font-weight: 400;
+  color: #fff;
+}
+.weather-card .top .wrapper .location {
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: 400;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp {
+  margin-top: 20px;
+}
+.weather-card .top .wrapper .temp a {
+  text-decoration: none;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp a .temp-type {
+  font-size: 85px;
+}
+.weather-card .top .wrapper .temp .temp-value {
+  display: inline-block;
+  font-size: 85px;
+  font-weight: 600;
+  color: #fff;
+}
+.weather-card .top .wrapper .temp .deg {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+  vertical-align: top;
+  margin-top: 10px;
+}
+.weather-card .top:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.weather-card .bottom {
+  padding: 0 30px;
+  background: #fff;
+}
+.weather-card .bottom .wrapper .forecast {
+  overflow: hidden;
+  margin: 0;
+  font-size: 0;
+  padding: 0;
+  padding-top: 20px;
+  max-height: 155px;
+}
+.weather-card .bottom .wrapper .forecast a {
+  text-decoration: none;
+  color: #000;
+}
+.weather-card .bottom .wrapper .forecast .go-up {
+  text-align: center;
+  display: block;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.weather-card .bottom .wrapper .forecast li {
+  display: block;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.25);
+  line-height: 1em;
+  margin-bottom: 30px;
+}
+.weather-card .bottom .wrapper .forecast li .date {
+  display: inline-block;
+}
+.weather-card .bottom .wrapper .forecast li .condition {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  font-size: 25px;
+}
+.weather-card .bottom .wrapper .forecast li .condition .temp {
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 2px;
+}
+.weather-card .bottom .wrapper .forecast li .condition .temp .deg {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 3px;
+  vertical-align: top;
+}
+.weather-card .bottom .wrapper .forecast li .condition .temp .temp-type {
+  font-size: 20px;
+}
+.weather-card .bottom .wrapper .forecast li.active {
+  color: rgba(0, 0, 0, 0.8);
+}
+.weather-card.rain .top {
+  background: url("http://img.freepik.com/free-vector/girl-with-umbrella_1325-5.jpg?size=338&ext=jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.date{
+  color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Kumar+One');
+
+h2{float:left; width:100%; color:#14594d; margin-bottom:60px; font-size: 14px; position:relartive; z-index:3;}
+h2 span{font-family: 'Kumar One', cursive; display:block; font-size:45px; text-transform:none; margin-bottom:20px; margin-top:30px;}
+h2 a{color:#fff; font-weight:bold;}
+
+section{float:left;width:100%;padding:30px 0; position:relative; overflow:hidden; background:#6F8D8A;}
+section:before{content:"";position:absolute; width:110%; height:100%;  background:url("https://static.pexels.com/photos/247599/pexels-photo-247599.jpeg") no-repeat 0 0; background-size:cover; filter: blur(10px); z-index:0; transform: scale(2);-ms-transform: scale(2); -webkit-transform: scale(2);}
+h3{margin-bottom:20px; font-weight:bold; color:#fff; text-shadow:1px 1px 0 rgba(0,0,0,0.2);}
+.btn-default{background:#DFC717; color:#fff; font-weight:700; text-shadow:1px 1px 0 rgba(0,0,0,0.2); font-size:14px;}
+.card{box-shadow:2px 2px 20px rgba(0,0,0,0.3); border:none; margin-bottom:30px;}
+.card-01 .card-body{position:relative; padding-top:40px;}
+.card-01 .badge-box{position:absolute; top:-20px; left:50%; width:100px; height:100px;margin-left:-50px; text-align:center;}
+.card-01 .badge-box i{background:#DFC717; color:#fff; border-radius:50%;  width:50px; height:50px; line-height:50px; text-align:center; font-size:20px;}
+.profile-box{background-size:cover; float:left; width:100%; text-align:center; padding:30px 0; position:relative; overflow:hidden;}
+.profile-box:before{filter: blur(10px);background:url("https://images.pexels.com/photos/195825/pexels-photo-195825.jpeg?h=350&auto=compress&cs=tinysrgb") no-repeat; background-size:cover; width:120%; position:absolute; content:""; height:120%; left:-10%;top:0;z-index:0;}
+.profile-box img{width:170px; height:170px; position:relative; border:5px solid #fff;}
+.social-box i {border:1px solid #DFC717; color:#DFC717; width:30px; height:30px; border-radius:50%;line-height:30px;}
+.social-box i:hover{background:#DFC717; color:#fff;}
+.social-box a{margin: 0 5px;}
+.video-foreground{float:left;width:100%; height:500px;}
+
+/*flipper-card*/
+.card-flipper {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__back .card{
+    width:100%;
+    height:65vh;
+}
+
+.card__front,
+.card__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card__front {
+  background-color: #ff5078;
+}
+
+.card__back {
+  background-color: #1e1e1e;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card-flipper.effect__hover:hover .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card-flipper.effect__hover:hover .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.card-flipper.effect__random.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card-flipper.effect__random.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}

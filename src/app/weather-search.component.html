@@ -1,50 +1,85 @@
+<body>
+ <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Weather Forcast</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
- <nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">TheDailyWeather</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="#">About Company</a>
+            <a class="dropdown-item" href="#">Our Skills</a>
+            <a class="dropdown-item disabled" href="#">our Team</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>  
+      </ul>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Maps</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">News & Video</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Climate</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Favorites</a>
-      </li>
-    </ul>
-    
-  </div>
-</nav>
+      <div class="searchBar">
+               <input #city value="">
+        
+          <input type="button" value="search"  name="click" (click)="getDetails('delhi')">
+      </div>
+      
+    </div>
 
+  </nav>
 
  <div> 
         
         <div class="jumbotron searchBar">
-
-          <input #city value="">
-        
-          <input type="button" value="search"  name="click" (click)="getDetails(city)"> 
-          
-
+             
+<div class="row box-shadow" *ngFor="let data of data">
+            <div class="lib-row lib-header">
+              Weather
+              <div class="lib-header-seperator"></div>
+              <p>DATE:{{item.date}}</p>
+              <hr>
+              <p>MAX_TEMP:{{item.day.maxtemp_c}}</p>
+              <hr>
+              <p>MIN_TEMP:{{item.day.mintemp_c}}</p>
+            </div>
+           </div>
+            <button type="button" (click)="getFavoritesList()" class="btn btn-danger">Favourites</button>
         </div>
  </div> 
 
+      <div class="row">
+  <div *ngIf="list">
+    <div *ngFor="let lists of list">
+      <ul>
+        <li>{{lists._id}}</li>
+        <li>{{lists.date}}</li>
+        <li>{{lists.maxtemp}}</li>
+        <li>{{lists.mintemp}}</li>
+
+       <button type="button" class="btn btn-outline-success">Edit</button>
+        <button type="button" (click)="delete(lists._id)"class="btn btn-outline-success">Delete</button>
+        <!-- <button type="button" class="btn btn-outline-success" (click)="showFavAll()">Details</button> -->
+      </ul>
+    </div>
+  </div>
+</div>
    <!-- <app-channel [results]='results'></app-channel> --> 
 
- 
- 
-
+</body>
 
 
 

@@ -1,32 +1,93 @@
-<div class="container">
-         <hr>
-
-            
-            <div class="row row-margin-bottom">
-            <div class="col-md-12 no-padding lib-item" data-category="view">
-                <div class="lib-panel">
-                  {{results.location.name}}
-                    <div class="row box-shadow" *ngFor="let item of results.forecast.forecastday">
-                        <div class="col-md-6" >
-                            <img class="lib-img-show" src="../assets/weather.png" alt="weather image">
+<body>
+  <div class="container">
+    <hr>
+    <div class="row row-margin-bottom">
+      <div class="col-md-12 no-padding lib-item" data-category="view">
+        <div class="lib-panel">
+          <h1>{{results.location.name}}</h1>
+          <div class="row box-shadow" *ngFor="let item of results.forecast.forecastday">
+            <!-- <div class="col-md-6">
+            <img class="lib-img-show" src="../assets/weather.png" alt="weather image">
+          </div> -->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="weather-card one">
+                    <div class="top">
+                      <div class="wrapper">
+                        <div class="mynav">
+                          <a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
+                          <a href="javascript:;"><span class="lnr lnr-cog"></span></a>
                         </div>
-                        <div class="col-md-6">
-                            <div class="lib-row lib-header">
-                                Weather
-                                <div class="lib-header-seperator"></div>
-                                <p>DATE:{{item.date}}</p><hr>
-                                <p>MAX_TEMP:{{item.day.maxtemp_c}}</p><hr>
-                                <p>MIN_TEMP:{{item.day.mintemp_c}}</p>
-                            </div>
-                           
-                        </div>
-                        <br>
+                        <h1 class="heading">{{item.day.condition.text}}</h1>
+                        <h3 class="location">{{results.location.name}}</h3>
+                        <p class="temp">
+                          <span class="temp-value">{{item.day.avgtemp_c}}</span>
+                          <span class="deg">0</span>
+                          <a href="javascript:;"><span class="temp-type">C</span></a>
+                        </p>
+                      </div>
+                      <h1><span class="date">{{item.date}}</span></h1>
                     </div>
+                    <div class="bottom">
+                      <div class="wrapper">
+                        <ul class="forecast">
+                          <a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a>
+                          <li class="active">
+                            <span class="text">Maximum Temperature</span>
+                            <span class="lnr lnr-sun condition">
+                  <span class="temp">{{item.day.maxtemp_c}}<span class="deg">0</span><span class="temp-type">C</span></span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="text">Minimum Temperature</span>
+                            <span class="lnr lnr-cloud condition">
+                  <span class="temp">{{item.day.mintemp_c}}<span class="deg">0</span><span class="temp-type">C</span></span>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>         
-           
+              </div>
             </div>
+            <div class="col-md-12">
+              <!-- <div class="lib-row lib-header">
+              Weather
+              <div class="lib-header-seperator"></div>
+              <p>DATE:{{item.date}}</p>
+              <hr>
+              <p>MAX_TEMP:{{item.day.maxtemp_c}}</p>
+              <hr>
+              <p>MIN_TEMP:{{item.day.mintemp_c}}</p>
+            </div> -->
+              <button type="button" (click)="saveData(item)" class="btn btn-primary">Add To Favourite</button>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 
-</div>         
-        
-        
+
+
+
+
+<div class="col-md-4 offset-md-2">
+            
+          <div class="card card-01">
+        <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ"></iframe>
+</div>
+<div class="card-body">
+            <span class="badge-box"><i class="fa fa-check"></i></span>
+            <h4 class="card-title"><h1>{{results.location.name}}</h1></h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-default text-uppercase">Explore</a>
+          </div>
+  </div>
+          
+        </div>

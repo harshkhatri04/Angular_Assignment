@@ -1,4 +1,4 @@
-import { Component,EventEmitter,Output } from '@angular/core';
+import { Component,EventEmitter,Output,OnInit } from '@angular/core';
 import { WeatherSearchService } from './weather-search.service';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
@@ -11,9 +11,11 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./weather-search.component.css'],
   providers: [WeatherSearchService]
 })
-export class WeatherSearchComponent {
+export class WeatherSearchComponent implements OnInit{
 
   results: Object;
+    list :any =[];
+    data :any = [];
 
   @Output() receive= new EventEmitter<any>();
   
@@ -32,7 +34,34 @@ export class WeatherSearchComponent {
       });
   }
 
+   
+   getFavoritesList(){
+
+   this.weatherSearchService.favList()
+        .subscribe((data)=>{
+          this.list=data;
+        })
+
+ }
+
+    delete(data:any) {
+   this.weatherSearchService.delete(data)
+   .subscribe(res=>{
+     this.data=res
+     console.log(this.data)
+   })
+ }
+  
+ ngOnInit() {
+    this.weatherSearchService.searchEntries('delhi')
+      .subscribe(results => {
+        this.results = results;
+        console.log(this.results)
+        this.receive.emit(this.results)
+      });
+  }
 
 
-    
+
+
 }
